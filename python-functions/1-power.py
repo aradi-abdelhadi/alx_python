@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
-pow = __import__('1-power').pow
+def pow(a, b):
+    """
+    Computes a to the power of b and returns the value.
 
-# Test cases
-result = pow(2, 2)
-print("Correct output - case: pow(2, 2):", result)
-
-result = pow(98, 2)
-print("Correct output - case: pow(98, 2):", result)
-
-result = pow(98, 0)
-print("Correct output - case: pow(98, 0):", result)
-
-result = pow(100, -2)
-print("Correct output - case: pow(100, -2):", result)
-
-result = pow(-4, 5)
-print("Correct output - case: pow(-4, 5):", result)
+    :param a: The base.
+    :param b: The exponent.
+    :return: The result of a to the power of b.
+    """
+    return a ** b
 
