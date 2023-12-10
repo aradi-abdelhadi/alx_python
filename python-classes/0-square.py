@@ -1,3 +1,9 @@
+"""
+0-square.py - A module that defines the Square class.
+
+This module contains the definition of the Square class, which represents a square with a private attribute 'size'.
+"""
+
 class Square:
     """
     This class represents a square.
