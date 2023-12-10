@@ -16,6 +16,31 @@ class Square:
         self.__size = size
         self.__validate_size()
 
+    @property
+    def size(self):
+        """
+        Get the size of the square.
+
+        Returns:
+            int: The size of the square.
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        Set the size of the square.
+
+        Parameters:
+            value (int): The new size of the square.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+        """
+        self.__size = value
+        self.__validate_size()
+
     def __validate_size(self):
         """
         Validates the size attribute.
