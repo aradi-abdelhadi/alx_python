@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+This module contains a function to check if an object is exactly an instance of a specified class.
+"""
+
 def is_same_class(obj, a_class):
     """
     Check if an object is exactly an instance of a specified class.
@@ -25,4 +29,3 @@ if __name__ == "__main__":
     if is_same_class(a, object):
         print("{} is an instance of the class {}".format(a, object.__name__))
 
-# New line added below
