@@ -12,8 +12,8 @@ class Rectangle(BaseGeometry):
     Rectangle class that inherits from BaseGeometry.
 
     Attributes:
-    - width (int): Private width of the rectangle.
-    - height (int): Private height of the rectangle.
+    - __width (int): Private width of the rectangle.
+    - __height (int): Private height of the rectangle.
     """
 
     def __init__(self, width, height):
@@ -27,16 +27,6 @@ class Rectangle(BaseGeometry):
         """Returns a string representation of the Rectangle."""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-    @property
-    def width(self):
-        """Getter for the private instance variable width."""
-        return self.__width
-
-    @property
-    def height(self):
-        """Getter for the private instance variable height."""
-        return self.__height
-
     def area(self):
         """Calculates and returns the area of the Rectangle."""
         return self.__width * self.__height
@@ -45,14 +35,6 @@ class Rectangle(BaseGeometry):
         """Prints the Rectangle with '#' characters."""
         for i in range(self.__height):
             print("#" * self.__width)
-
-    def __setattr__(self, name, value):
-        """Overrides the default setattr method to validate attribute assignment."""
-        if name == "__width" and not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif name == "__height" and not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        super().__setattr__(name, value)
 
     def integer_validator(self, name, value):
         """Validates that the value is a positive integer."""
@@ -68,12 +50,12 @@ if __name__ == "__main__":
     print(dir(r))
 
     try:
-        print("Rectangle: {} - {}".format(r.width, r.height))
-    except Exception as e:
+        print("Rectangle: {} - {}".format(r.__width, r.__height))
+    except AttributeError as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
     try:
         r2 = Rectangle(4, True)
-    except Exception as e:
+    except (TypeError, ValueError) as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
