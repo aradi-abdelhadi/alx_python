@@ -2,10 +2,16 @@
 
 class BaseGeometry:
     """
-    An empty class representing a base geometry.
+    This module defines an empty class called BaseGeometry.
 
-    This class serves as a base for geometry-related classes.
-    It is currently empty and can be used as a foundation for more specific geometrical implementations.
+    The BaseGeometry class serves as a foundation for geometry-related classes.
+    It is currently empty and can be used as a starting point for more specific geometrical implementations.
+
+    Attributes:
+    - No attributes are defined in this class.
+
+    Methods:
+    - No methods are defined in this class.
     """
     pass
 
