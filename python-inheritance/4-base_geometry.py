@@ -20,7 +20,7 @@ class BaseGeometry:
         Raises:
         - Exception: Always raises an Exception with the message "area() is not implemented".
         """
-        raise Exception("area() is not implemented")
+        raise NotImplementedError("area() is not implemented")
 
 # Test case
 if __name__ == "__main__":
