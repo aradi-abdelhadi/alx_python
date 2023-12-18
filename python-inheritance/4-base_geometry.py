@@ -15,8 +15,7 @@ class BaseGeometry:
     """
     def area(self):
         """
-        Check if an object is an instance of a class that inherited (directly or indirectly)
-        from the specified class.
+        Placeholder method for calculating the area.
 
         Raises:
         - Exception: Always raises an Exception with the message "area() is not implemented".
