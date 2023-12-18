@@ -15,8 +15,20 @@ class BaseGeometry:
     """
     def area(self):
         """
+        Check if an object is an instance of a class that inherited (directly or indirectly)
+        from the specified class.
+
         Raises:
         - Exception: Always raises an Exception with the message "area() is not implemented".
         """
         raise Exception("area() is not implemented")
+
+# Test case
+if __name__ == "__main__":
+    bg = BaseGeometry()
+
+    try:
+        print(bg.area())
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
 
