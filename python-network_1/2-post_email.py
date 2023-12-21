@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that takes a URL and an email address, sends a POST request, and displays the response """
+""" Script that takes in a URL and an email address, sends a POST request, and displays the response """
 
 import requests
 import sys
@@ -14,7 +14,7 @@ if __name__ == "__main__":
         url = f'{url}{separator}email={email}'
         
         response = requests.post(url)
-        print("Your email is:", email=test@test.com)
+        print("Your email is:", email)
         print(response.text)
     else:
         print("Usage: ./2-post_email.py <URL> <email>")
