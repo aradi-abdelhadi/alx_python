@@ -14,7 +14,7 @@ if __name__ == "__main__":
         url = f'{url}{separator}email={email}'
         
         response = requests.post(url)
-        print("Your email is:", email)
+        print("Your email is:", email=test@test.com)
         print(response.text)
     else:
         print("Usage: ./2-post_email.py <URL> <email>")
