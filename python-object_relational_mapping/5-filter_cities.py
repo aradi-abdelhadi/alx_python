@@ -1,16 +1,15 @@
 import sys
 import MySQLdb
 
-if len(sys.argv) != 5:
-    print("Usage: python script.py host port user password database state_name")
+if len(sys.argv) != 4:
+    print("Usage: python script.py host port user database")
     sys.exit(1)
 
 host = sys.argv[1]
 port = int(sys.argv[2])
 user = sys.argv[3]
-password = sys.argv[4]
-database = sys.argv[5]
-state_name = sys.argv[6]
+password = input("Enter password: ")  # Prompt for password securely
+database = sys.argv[4]
 
 try:
     # Connect to the database
@@ -42,7 +41,7 @@ except MySQLdb.Error as e:
 
 finally:
     # Close cursor and database connection
-    if 'cur' in locals() and cur:
+    if cur:
         cur.close()
-    if 'db' in locals() and db:
+    if db:
         db.close()
